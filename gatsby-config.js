@@ -38,11 +38,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-      fonts: [`Roboto`, `Oswald`],
-      display: "swap",
-      },
-      
-      }, 
+        fonts: [`Roboto`, `Oswald`],
+        display: "swap",
+      },  
+    }, 
+    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
