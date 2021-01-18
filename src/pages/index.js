@@ -5,7 +5,18 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
+  const {
+    wpcontent: {
+      page: {
+        homeMeta: {
+          homePageHeaderDescription,
+          homePageHeaderTitle,
+          homePageHeaderPicture,
+          homePageFeaturedCars,
+        }
+      }
+    }
+  } = useStaticQuery(graphql`
     query {
       wpcontent {
         page(id: "home", idType: URI) {
@@ -14,6 +25,14 @@ const IndexPage = () => {
             homePageHeaderTitle
             homePageHeaderPicture {
               altText
+              sourceUrl
+              imageFile {
+                childImageSharp {
+                  fluid(quality: 100){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             homePageFeaturedCars {
               ... on WPGraphql_Car {
@@ -22,6 +41,14 @@ const IndexPage = () => {
                   model
                   mainImage {
                     altText
+                    sourceUrl
+                    imageFile {
+                      childImageSharp {
+                        fluid(quality: 100){
+                          ...GatsbyImageSharpFluid_withWebp
+                        }
+                      }
+                    }
                   }
                   price
                   mileage
@@ -39,7 +66,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
