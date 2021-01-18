@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
+import {Wrapper, Image, Car} from "./pageStyles/pageStyles"
 
 const IndexPage = () => {
   const {
@@ -69,6 +70,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Wrapper>
+        <div className="banner">
+          <Image fluid={homePageHeaderPicture.imageFile.childImageSharp.fluid} alt={homePageHeaderPicture.altText} />
+        </div>
+      </Wrapper>
     </Layout>
   )
 }
