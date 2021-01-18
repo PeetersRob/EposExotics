@@ -109,28 +109,6 @@ export const Wrapper = styled.div`
 
   }
 
-  .contact-info {
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 2rem;
-
-    div {
-      width: 33.33%;
-      padding: 1em;
-      color: #fadcaa;
-      p {
-        margin-top: 1rem;
-        color: white;
-
-        a {
-          color: #c56183;
-        }
-      }
-    }
-  }
-
   .cars {
     position: relative;
     display: flex;
