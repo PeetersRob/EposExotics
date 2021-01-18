@@ -29,7 +29,6 @@ const Header = ({ siteTitle }) => {
       }
     }
   `)
-    console.log(menuItems)
   return (
     <HeaderWrapper>
       <Link to="/">
