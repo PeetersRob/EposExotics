@@ -18,7 +18,8 @@ export const Wrapper = styled.div`
       transform: translate(-50%, -50%);
       width: 60%;
       padding: 1rem;
-      background-color: #794c74;
+      background-color: #c28b00eb;
+      border-radius: 5px;
 
       p {
         color: white;
@@ -44,7 +45,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     position: relative;
     width: 100%;
-    padding: 3rem 0 10rem;
+    padding: 6rem 0 6rem;
     background-color: #181819;
 
     h2 {
@@ -64,6 +65,27 @@ export const Wrapper = styled.div`
       line-height: 2rem;
       margin: auto;
     }
+
+    .custom-shape-divider-bottom-1610989136 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+  
+    .custom-shape-divider-bottom-1610989136 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 64px;
+    }
+  
+    .custom-shape-divider-bottom-1610989136 .shape-fill {
+        fill: #FFFFFF;
+    }
+
   }
 
   .contact-info {
@@ -89,18 +111,19 @@ export const Wrapper = styled.div`
   }
 
   .cars {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 2rem 5%;
-    background-color: #794c74;
+    background-color: #ffffff;
 
     h2 {
       font-family: Oswald;
       font-size: 3rem;
-      color: white;
+      color: #181819;
       text-transform: uppercase;
       margin-bottom: 3rem;
     }
@@ -112,6 +135,27 @@ export const Wrapper = styled.div`
       flex-wrap: wrap;
       width: 100%;
       padding: 0 5%;
+    }
+
+    .custom-shape-divider-bottom-1610989788 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+  
+    .custom-shape-divider-bottom-1610989788 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 76px;
+    }
+    
+    .custom-shape-divider-bottom-1610989788 .shape-fill {
+        fill: #181819;
     }
   }
 `
@@ -128,7 +172,7 @@ export const Car = styled(Link)`
   &:hover {
     transform: scale(1.05);
 
-    .cars-info {
+    .car-info {
       height: 100%;
       background-color: #fadcaa;
 
@@ -143,7 +187,7 @@ export const Car = styled(Link)`
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    height: 80px;
+    height: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -153,14 +197,24 @@ export const Car = styled(Link)`
 
     p {
       text-transform: uppercase;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: white;
       margin: 0;
     }
 
+    p:nth-child(1) {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: #808080
+    }
+
     p:nth-child(2) {
-      color: #c56183;
+      margin-top: 0.3rem;
+    }
+
+    p:nth-child(3) {
+      color: #c28b00;
       margin-top: 0.3rem;
     }
   }
