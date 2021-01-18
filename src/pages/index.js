@@ -1,10 +1,9 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import {Wrapper, Image, Car} from "./pageStyles/pageStyles"
-import { node } from "prop-types"
 
 const IndexPage = () => {
   const {
@@ -95,6 +94,9 @@ const IndexPage = () => {
               <Car to={`/${slug}`}>
                 <Image fluid={car.mainImage.imageFile.childImageSharp.fluid} altText={car.mainImage.altText} />
                 <div className="car-info">
+                  {makes.nodes.map((name) => (
+                    <p>{name.name}</p>
+                  ))}
                   <p>{car.model}</p>
                   <p>{`€${car.price} ${car.mileage}Km`}</p>
                 </div>
