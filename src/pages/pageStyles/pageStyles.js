@@ -38,6 +38,27 @@ export const Wrapper = styled.div`
         margin-bottom: 1rem;
       }
     }
+
+    .custom-shape-divider-bottom-1610995967 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+  
+    .custom-shape-divider-bottom-1610995967 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 76px;
+    }
+    
+    .custom-shape-divider-bottom-1610995967 .shape-fill {
+        fill: #181819;
+    }
   }
 
   .description {
@@ -45,7 +66,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     position: relative;
     width: 100%;
-    padding: 6rem 0 6rem;
+    padding: 4rem 0 9rem;
     background-color: #181819;
 
     h2 {
@@ -126,6 +147,7 @@ export const Wrapper = styled.div`
       color: #181819;
       text-transform: uppercase;
       margin-bottom: 3rem;
+      margin-top: 2.8rem;
     }
 
     .car-items {
@@ -134,7 +156,7 @@ export const Wrapper = styled.div`
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
-      padding: 0 5%;
+      padding-bottom: 10vh
     }
 
     .custom-shape-divider-bottom-1610989788 {
@@ -174,10 +196,14 @@ export const Car = styled(Link)`
 
     .car-info {
       height: 100%;
-      background-color: #fadcaa;
+      background-color: #ffffffd1;
 
       p {
         color: #181819;
+      }
+
+      p:nth-child(1) {
+        color: #424242
       }
     }
   }
@@ -192,7 +218,7 @@ export const Car = styled(Link)`
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #181819;
+    background-color: #181819d1;
     transition: all 0.3s ease-in-out;
 
     p {
