@@ -54,7 +54,6 @@ const IndexPage = () => {
                   }
                   price
                   mileage
-                  year
                 }
                 makes {
                   nodes {
@@ -78,9 +77,9 @@ const IndexPage = () => {
           <div className="inner-div">
             <p className="header-title">{homePageHeaderTitle}</p>
           </div>
-          <div class="custom-shape-divider-bottom-1610995967">
+          <div className="custom-shape-divider-bottom-1610995967">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" className="shape-fill"></path>
             </svg>
           </div>
         </div>
@@ -96,11 +95,11 @@ const IndexPage = () => {
           <h2>Featured Cars</h2>
           <div className="car-items">
             {homePageFeaturedCars.map(({car, slug, makes}) => (
-              <Car to={`/${slug}`}>
+              <Car to={`/${slug}`} key={slug}>
                 <Image fluid={car.mainImage.imageFile.childImageSharp.fluid} altText={car.mainImage.altText} />
                 <div className="car-info">
                   {makes.nodes.map((name) => (
-                    <p>{name.name}</p>
+                    <p key={name.name}>{name.name}</p>
                   ))}
                   <p>{car.model}</p>
                   <p>{`€${car.price} ${car.mileage}Km`}</p>
