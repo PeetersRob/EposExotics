@@ -1,8 +1,10 @@
 const { graphql } = require("gatsby")
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+const path = require("path")
 
 exports.createPages = ({graphql, actions}) => {
-    const query = graphql(`
+    const {createPage} = actions
+    return graphql(`
         {
             wpcontent {
                 cars {
@@ -21,7 +23,17 @@ exports.createPages = ({graphql, actions}) => {
             return Promise.reject(result.errors);
         }
         const cars = result.data.wpcontent.cars.edges;
-        console.log(cars, "console log cars data")
+        cars.forEach(car => {
+            const {id, slug} = car.node;
+            createPage({
+               path: slug,
+               component: path.resolve(`src/templates/artist.js`),
+               context: {
+                   id,
+                   slug
+               }
+            })
+        })
     })
 }
 
