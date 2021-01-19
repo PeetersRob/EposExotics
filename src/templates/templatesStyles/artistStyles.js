@@ -12,10 +12,18 @@ export const Wrapper = styled.div`
     width: 100%;
     background-color: #242124;
 
+    @media (max-width: 980px) {
+      flex-direction: column;
+    }
     .car-image {
       position: relative;
       width: 50vw;
       height: 30vw;
+
+      @media (max-width: 980px) {
+        width: 100%;
+        height: 30vh;
+      }
 
       .makes {
         position: absolute;
@@ -42,6 +50,10 @@ export const Wrapper = styled.div`
       flex-direction: column;
       width: 60vw;
       padding: 1.5rem 2rem;
+      
+      @media (max-width: 980px) {
+        width: 100%;
+      }
 
       h2 {
         font-family: Oswald;

@@ -23,6 +23,10 @@ export const HeaderWrapper = styled.header`
     text-align: center;
     justify-content: center;
   }
+
+  @media (max-width: 980px){
+    display: none;
+  }
 `
 export const Image = styled(Img)`
   margin: auto 0;
@@ -55,4 +59,58 @@ export const MenuList = styled.ul`
   .nav-active {
     color: #c28b00;
   }
+`
+export const HamburgerButton = styled.div`
+  display: block;
+  position: fixed;
+  right: 5%;
+  top: 1.25rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  color: #fadcaa;
+  z-index: 1000;
+  transition: all 0.2s ease;
+
+  :hover {
+    transform: scale(1.1);
+  }
+
+  @media (min-width: 980px) {
+    display: none;
+  }
+`
+export const CloseButton = styled.div`
+  display: flex;
+  right: 1.5rem;
+  top: 1.5rem;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  color: #fadcaa;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+
+  transition: all 0.2s ease;
+
+  :hover {
+    transform: scale(1.1);
+  }
+`
+
+export const OverlayWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #181819;
+  z-index: 9999;
+  transition: 1s ease-in-out opacity;
 `
