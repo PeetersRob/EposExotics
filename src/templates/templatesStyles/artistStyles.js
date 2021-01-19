@@ -6,18 +6,18 @@ export const Wrapper = styled.div`
   background-color: #181819;
   margin-top: 100px;
 
-  .artist-container {
+  .car-container {
     display: flex;
     margin: 3rem auto;
-    width: 90%;
+    width: 100%;
     background-color: #242124;
 
-    .artist-image {
+    .car-image {
       position: relative;
-      width: 40vw;
-      height: 40vw;
+      width: 50vw;
+      height: 30vw;
 
-      .roles {
+      .makes {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -31,13 +31,13 @@ export const Wrapper = styled.div`
         background-color: #242124;
         border-right: solid 15px #c56183;
 
-        .role {
+        .make {
           padding: 1rem 1.5rem;
         }
       }
     }
 
-    .artist-info {
+    .car-info {
       display: flex;
       flex-direction: column;
       width: 60vw;
@@ -78,13 +78,13 @@ export const Wrapper = styled.div`
     }
   }
 
-  .artist-pictures {
+  .car-pictures {
     display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 2rem;
 
-    .artist-picture {
+    .car-picture {
       width: 28.5vw;
       height: 57vw;
       margin: 0 1vw;

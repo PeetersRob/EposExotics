@@ -5,13 +5,23 @@ import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import {Wrapper, Image} from './templatesStyles/artistStyles'
 
-const Artist = ({data}) => {
-    
-    return (
-        <div>
-            Hello
-        </div>
-    )
+const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
+    return <Layout>
+        <SEO title="Car"/>
+        <Wrapper>
+            <div className="car-container">
+                <div className="car-image">
+                    <Image fluid={car.mainImage.imageFile.childImageSharp.fluid} />
+                </div>
+                <div className="car-info">
+                    <h2>{car.model}</h2>
+                    {makes.map(({node: make}) => (
+                        <h3>{make.name}</h3>
+                    ))}
+                </div>
+            </div>
+        </Wrapper>
+    </Layout>
 }
 
 export default Artist
@@ -19,7 +29,7 @@ export default Artist
 export const pageQuery = graphql`
 query ($id: ID!) {
     wpcontent {
-        car(id: "$id", idType: ID) {
+        car(id: $id, idType: ID) {
             makes {
                 edges {
                     node {
