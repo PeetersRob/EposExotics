@@ -6,17 +6,20 @@ import SEO from '../components/Seo'
 import {Wrapper, Image} from './templatesStyles/artistStyles'
 
 const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
-    return <Layout>
-        <SEO title="Car"/>
+    const {picture1, picture2, picture3} = car.detailPictures
+    const images = [picture1, picture2, picture3];
+    console.log(images)
+    return (<Layout>
+        <SEO title={car.model}/>
         <Wrapper>
             <div className="car-container">
                 <div className="car-image">
-                    <Image fluid={car.mainImage.imageFile.childImageSharp.fluid} />
+                    <Image fluid={car.mainImage.imageFile.childImageSharp.fluid} alt={car.mainImage.altText}/>
                 </div>
                 <div className="car-info">
                     <h2>{car.model}</h2>
                     {makes.map(({node: make}) => (
-                        <h3>{make.name}</h3>
+                        <h3 key={make.name}>{make.name}</h3>
                     ))}
                     <p className="description">{car.description}</p>
                     <p className="info">
@@ -39,9 +42,16 @@ const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
                     </p>
                 </div>
             </div>
+            <div className="car-pictures">
+                {images.map(image => (
+                    <div className="car-picture" key={image.sourceUrl}>
+                        <Image fluid={image.imageFile.childImageSharp.fluid} altText={image.altText}/>
+                    </div>
+                ))}
+            </div>
         </Wrapper>
     </Layout>
-}
+)}
 
 export default Artist
 

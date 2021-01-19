@@ -83,8 +83,8 @@ export const Wrapper = styled.div`
     margin-top: 2rem;
 
     .car-picture {
-      width: 28.5vw;
-      height: 57vw;
+      width: 38vw;
+      height: 25vw;
       margin: 0 1vw;
     }
   }
