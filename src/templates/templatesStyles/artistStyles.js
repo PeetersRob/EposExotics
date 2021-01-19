@@ -55,20 +55,18 @@ export const Wrapper = styled.div`
 
       h3 {
         font-family: Oswald;
-        color: #c56183;
+        color: #c28b00;
         font-size: 1.8rem;
         text-transform: uppercase;
         margin-left: auto;
-        margin-bottom: auto;
-
-        span:first-child {
-          color: #fadcaa;
-        }
+        margin-top: 0.3rem;
       }
 
       .description {
         font-size: 1.2rem;
         color: #fadcaa;
+        text-align: right;
+        margin-bottom: auto;
       }
 
       .info {

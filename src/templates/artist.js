@@ -18,6 +18,25 @@ const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
                     {makes.map(({node: make}) => (
                         <h3>{make.name}</h3>
                     ))}
+                    <p className="description">{car.description}</p>
+                    <p className="info">
+                        <strong>Price: </strong>€{car.price}
+                    </p>
+                    <p className="info">
+                        <strong>Mileage: </strong>{car.mileage}km
+                    </p>
+                    <p className="info">
+                        <strong>Year: </strong>{car.year}
+                    </p>
+                    <p className="info">
+                        <strong>Transmission: </strong>{car.transmission}
+                    </p>
+                    <p className="info">
+                        <strong>Interior color: </strong>{car.interiorColor}
+                    </p>
+                    <p className="info">
+                        <strong>Exterior color: </strong>{car.exteriorColor}
+                    </p>
                 </div>
             </div>
         </Wrapper>
