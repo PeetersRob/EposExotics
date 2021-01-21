@@ -36,6 +36,10 @@ export const Wrapper = styled.div`
         margin: auto;
         border-bottom: solid 5px white;
         margin-bottom: 1rem;
+
+        @media (max-width: 980) {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -85,6 +89,11 @@ export const Wrapper = styled.div`
       text-align: center;
       line-height: 2rem;
       margin: auto;
+
+      @media (max-width: 980px) {
+        width: 90%;
+        font-size: 1rem;
+      }
     }
 
     .custom-shape-divider-bottom-1610989136 {
@@ -126,6 +135,11 @@ export const Wrapper = styled.div`
       text-transform: uppercase;
       margin-bottom: 3rem;
       margin-top: 2.8rem;
+
+      media (max-width: 980px}) {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
     .car-items {
@@ -168,6 +182,12 @@ export const Car = styled(Link)`
   margin: 2vw;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+
+  @media (max-width: 980px) {
+    width: 90vw;
+    height: 90vw;
+    margin: 2vw 0;
+  }
 
   &:hover {
     transform: scale(1.05);

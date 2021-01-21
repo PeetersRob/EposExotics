@@ -79,6 +79,10 @@ export const Wrapper = styled.div`
         color: #fadcaa;
         text-align: right;
         margin-bottom: auto;
+
+        @media (max-width: 980px) {
+          margin-bottom: 1.5rem;
+        }
       }
 
       .info {
@@ -94,10 +98,20 @@ export const Wrapper = styled.div`
     justify-content: center;
     margin-top: 2rem;
 
+    @media (max-width: 980px) {
+      flex-direction: column;
+    }
+
     .car-picture {
       width: 38vw;
       height: 25vw;
       margin: 0 1vw;
+
+      @media (max-width: 980px) {
+        width: 90vw;
+        height: 60vw;
+        margin: 2vw auto;
+      }
     }
   }
 `
