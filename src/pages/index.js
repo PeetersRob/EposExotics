@@ -67,7 +67,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(homePageFeaturedCars)
   return (
     <Layout>
       <SEO title="Home" />

@@ -8,7 +8,6 @@ import {Wrapper, Image} from './templatesStyles/artistStyles'
 const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
     const {picture1, picture2, picture3} = car.detailPictures
     const images = [picture1, picture2, picture3];
-    console.log(images)
     return (<Layout>
         <SEO title={car.model}/>
         <Wrapper>
