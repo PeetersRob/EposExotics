@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Epos Exotic Cars`,
+    description: `Epos Exotics is the place to go for rare and exlusive cars`,
+    author: `@Rob Peeters`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
