@@ -27,7 +27,7 @@ exports.createPages = ({graphql, actions}) => {
             const {id, slug} = car.node;
             createPage({
                path: slug,
-               component: path.resolve(`src/templates/artist.js`),
+               component: path.resolve(`src/templates/car.js`),
                context: {
                    id,
                    slug

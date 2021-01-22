@@ -3,7 +3,7 @@ import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
-import {Wrapper, Image} from './templatesStyles/artistStyles'
+import {Wrapper, Image} from './templatesStyles/carStyle'
 
 const Artist = ({data: {wpcontent: {car: {car, makes: {edges: makes}}}}}) => {
     const {picture1, picture2, picture3} = car.detailPictures
